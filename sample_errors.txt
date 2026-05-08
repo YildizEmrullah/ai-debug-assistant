@@ -1,0 +1,11 @@
+TypeError: Cannot read properties of undefined (reading 'map')
+    at UserList (src/components/UserList.jsx:18:21)
+    at renderWithHooks (react-dom.development.js:16305:18)
+
+Traceback (most recent call last):
+  File "app.py", line 4, in <module>
+    import requests
+ModuleNotFoundError: No module named 'requests'
+
+SyntaxError: unexpected token ')'
+    at parseConfig (src/config/loadConfig.ts:27:14)

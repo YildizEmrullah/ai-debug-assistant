@@ -1,0 +1,51 @@
+ERROR TYPE: TypeError
+Description: TypeError usually means an operation is applied to a value with an incompatible type. In Python this can happen when adding a string and an integer, calling len() on None, or treating a non-list object as a list.
+Example:
+    age = 20
+    message = "Age: " + age
+Fix:
+    Convert values to compatible types before combining them. Use str(age), validate incoming data, and check None values before calling methods.
+
+ERROR TYPE: TypeError
+Description: JavaScript TypeError often appears when reading a property from undefined or null. A common example is calling map() before API data has loaded.
+Example:
+    const names = users.map(user => user.name)
+Fix:
+    Use a fallback array or optional chaining. Example: const users = response?.users ?? []; then call users.map(...).
+
+ERROR TYPE: NameError
+Description: NameError means Python cannot find a variable, function, or class name in the current scope. This often happens because of a typo, missing assignment, or missing import.
+Example:
+    print(user_name)
+Fix:
+    Define the variable before use, check spelling, and make sure the name exists in the same scope. Example: user_name = "Ayse"; print(user_name).
+
+ERROR TYPE: IndexError
+Description: IndexError means code is trying to access a list, tuple, or sequence position that does not exist. The most common case is reading index 0 from an empty list.
+Example:
+    items = []
+    first_item = items[0]
+Fix:
+    Check the list length before indexing. Example: if items: first_item = items[0] else: first_item = None.
+
+ERROR TYPE: ModuleNotFoundError
+Description: ModuleNotFoundError means Python cannot import a package or module. The package may not be installed, the virtual environment may be inactive, or the import path may be wrong.
+Example:
+    import requests
+Fix:
+    Add the package to requirements.txt and install it with pip install -r requirements.txt. Also verify that the correct virtual environment is active.
+
+ERROR TYPE: ValueError
+Description: ValueError means a function received the right type of value but the value itself is invalid. A common example is converting a non-numeric string to int.
+Example:
+    count = int("abc")
+Fix:
+    Validate or sanitize the value before conversion. Use try/except and show a clear fallback message when input is invalid.
+
+ERROR TYPE: KeyError
+Description: KeyError means code is trying to read a dictionary key that does not exist. It often happens when API responses do not contain the expected field.
+Example:
+    user = {"name": "Ayse"}
+    email = user["email"]
+Fix:
+    Use dict.get(), check key existence, or provide a default value. Example: email = user.get("email", "unknown@example.com").
